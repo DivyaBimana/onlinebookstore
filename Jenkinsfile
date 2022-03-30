@@ -2,24 +2,24 @@ pipeline
 {
   stages
   {
-    stage('building the job')
+    stage("building the job")
     {
-      step('build')
+      step("build")
       sh ('mvn clear')
     }
-   stage('test the job')
+   stage("test the job")
     {
-    step('test')
+    step("test")
     sh ('mvn test')
     }
-   stage('compile the job')
+   stage("compile the job")
     {
-    step('compile')
+    step("compile")
     sh ('mvn compile')
     }
-    stage('deploy the job')
+    stage("deploy the job")
     {
-    step('deploy')
+    step("deploy")
     }
   }
 }
