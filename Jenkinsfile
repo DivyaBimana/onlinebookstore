@@ -7,21 +7,21 @@ agent any
     {
       steps{
         echo "build"
-        sh ('mvn clear')
+        sh "mvn clear"
     }
     }
    stage('test the job')
     {
       steps{
       echo "test"
-      sh ('mvn test')
+      sh "mvn test"
     }
     }
    stage('compile the job')
     {
       steps{
         echo "compile"
-        sh ('mvn compile')
+        sh "mvn compile"
     }
     }
     stage('deploy the job')
