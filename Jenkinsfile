@@ -7,7 +7,7 @@ agent any
     {
       steps{
         echo "build"
-        sh "mvn clear"
+        sh "mvn clean"
     }
     }
    stage('test the job')
