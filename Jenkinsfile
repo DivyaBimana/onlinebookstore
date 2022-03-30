@@ -5,22 +5,29 @@ agent any
   {
     stage('building the job')
     {
-      step('build')
-      sh ('mvn clear')
+      steps{
+        echo "build"
+        sh ('mvn clear')
+    }
     }
    stage('test the job')
     {
-    step('test')
-    sh ('mvn test')
+      steps{
+      echo "test"
+      sh ('mvn test')
+    }
     }
    stage('compile the job')
     {
-    step('compile')
-    sh ('mvn compile')
+      steps{
+        echo "compile"
+        sh ('mvn compile')
+    }
     }
     stage('deploy the job')
     {
-    step('deploy')
+      steps{
+        echo "deploy"
     }
   }
 }
